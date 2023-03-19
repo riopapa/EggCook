@@ -1,0 +1,6 @@
+<resources>
+    <string name = "app_name">EggCook</string>
+    <string name = "step_1x">1. 달걀이 잠길 만큼의 물에 소금 반 스푼이나 식초를 두세 방울 넣고 센 불로 팔팔 끓입니다. \n2.물이 팔팔 끓으면 중불로 바꿉니다. \n3.달걀을 숟가락이나 국자에 달걀을 올린 후 끓는 물에 내려놓습니다\n4. 적당한 반숙을 위해 (중 불로) 더 끓입니다.</string>
+    <string name = "ready">물 다 끓은 후 달걀을 넣었나요? 버튼을 누르면 익히기 타이머가 시작됩니다 </string>
+    <string name = "step_1">물을 팔팔 끓인 후, 중불로 바꾸고 달걀을 넣습니다</string>
+</resources>

@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:app = "http://schemas.android.com/apk/res-auto"
+    xmlns:tools = "http://schemas.android.com/tools"
+    android:layout_width = "match_parent"
+    android:layout_height = "match_parent"
+    android:background="#999999"
+    tools:context = ".MainActivity">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/icons"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/intro"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        >
+        <ImageView
+            android:id = "@+id/egg_gif"
+            android:layout_width = "80dp"
+            android:layout_height = "80dp"
+            android:src="@mipmap/egg"
+            />
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/egg_ani"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="#00000000"
+            android:src="@mipmap/kitchen_timer" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <TextView
+        android:id = "@+id/intro"
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        android:layout_margin = "8dp"
+        android:text = "@string/step_1"
+        android:gravity="center"
+        android:textColor = "#fff"
+        android:textSize = "16sp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toTopOf = "@id/boiling_layout"
+        app:layout_constraintEnd_toEndOf = "parent"
+        app:layout_constraintStart_toStartOf = "parent"
+        app:layout_constraintTop_toBottomOf = "@id/icons" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/boiling_layout"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/intro"
+        app:layout_constraintBottom_toTopOf = "@id/time2boil"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        >
+        <TextView
+            android:id="@+id/text3"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:gravity="center"
+            android:text = "달걀\n끓이기"
+            android:textSize="16sp"
+            android:textColor="#fff"
+            android:layout_margin="8dp"
+            />
+
+        <TextView
+            android:id="@+id/txt_boil_m"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:gravity="center_vertical"
+            android:text = "↓"
+            android:textSize="24sp"
+            android:textColor="#fff"
+            android:layout_margin="8dp"
+            />
+
+        <TextView
+            android:id="@+id/txt_boil"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:gravity="center_vertical"
+            android:text = "7 분"
+            android:textSize="24sp"
+            android:textColor="#fff"
+            android:layout_margin="8dp"
+            />
+
+        <TextView
+            android:id="@+id/txt_boil_p"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:gravity="center_vertical"
+            android:text = "↑"
+            android:textSize="24sp"
+            android:textColor="#fff"
+            android:layout_margin="8dp"
+            />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <TextView
+        android:id="@+id/time2boil"
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        android:text = "이제 불을 끄세요"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:textColor="#fff"
+        android:layout_margin="8dp"
+        app:layout_constraintTop_toBottomOf="@id/boiling_layout"
+        app:layout_constraintBottom_toTopOf = "@id/waiting_layout"
+        app:layout_constraintEnd_toEndOf = "parent"
+        app:layout_constraintStart_toStartOf = "parent" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/waiting_layout"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/time2boil"
+        app:layout_constraintBottom_toTopOf = "@id/gogo_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center_vertical"
+        >
+
+        <TextView
+            android:id="@+id/text4"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:gravity="center"
+            android:text = "불끄고\n대기"
+            android:textSize="16sp"
+            android:textColor="#fff"
+            android:layout_margin="8dp"
+            app:layout_constraintTop_toBottomOf="@id/text3"
+            app:layout_constraintBottom_toTopOf = "@id/ready"
+            app:layout_constraintStart_toStartOf = "parent" />
+
+
+        <TextView
+            android:id="@+id/txt_wait_m"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:textAlignment="center"
+            android:text = "↓"
+            android:textSize="24sp"
+            android:textColor="#fff"
+            android:layout_margin="8dp"
+            />
+
+        <TextView
+            android:id="@+id/txt_wait"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:textAlignment="center"
+            android:text = "4 분"
+            android:textSize="24sp"
+            android:textColor="#fff"
+            android:layout_margin="8dp"
+            />
+
+        <TextView
+            android:id="@+id/txt_wait_p"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:textAlignment="center"
+            android:text = "↑"
+            android:textSize="24sp"
+            android:textColor="#fff"
+            android:layout_margin="8dp"
+            />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/gogo_layout"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/waiting_layout"
+        app:layout_constraintBottom_toBottomOf="@id/ready"
+        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+        <TextView
+            android:id="@+id/text_time"
+            android:layout_width = "160sp"
+            android:layout_height = "wrap_content"
+            android:textAlignment="center"
+            android:text = "ready"
+            android:textSize="16sp"
+            android:textColor="#f55"
+            android:background="#ccc"
+            android:padding="6sp"
+            android:layout_marginTop="8sp"
+            android:layout_marginRight="24sp"
+        />
+        <ImageView
+            android:id="@+id/start_stop"
+            android:layout_width = "48dp"
+            android:layout_height = "48dp"
+            android:src="@drawable/starting"
+            />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <TextView
+        android:id="@+id/ready"
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        android:textAlignment="center"
+        android:text = "차가운 물에 10초 이상을 담근 후 껍질을 벗기시면 됩니다. "
+        android:textSize="16sp"
+        android:textColor="#fff"
+        android:layout_margin="8dp"
+        app:layout_constraintTop_toBottomOf="@id/gogo_layout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf = "parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
